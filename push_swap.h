@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 01:44:51 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/08/16 02:10:56 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/08/16 13:02:59 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,23 @@ typedef struct s_user_input
 	int				ops[11];
 }					t_input;
 
+typedef struct s_node
+{
+	int				val;
+	struct s_node	*prev;
+	struct s_node	*next;
+}					t_node;
+
 typedef struct s_dl_list
 {
 	int				len;
 	struct s_node	*head;
 	struct s_node	*tail;
 }					t_dll;
+
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_atoi(const char *str);
+char				*ft_itoa(int n);
+size_t				ft_strlen(const char *str);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 01:52:40 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/08/16 02:29:29 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/08/16 13:05:11 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,31 @@
 
 int	process_user_input(t_input *store, int ac, char **av)
 {
-	// To be implemented
+	int	i;
+
+	i = 0;
+	while (++i < ac)
+	{
+		if (av[i][0] == '-' && av[i][1] == '-')
+		{
+			if (ft_strncmp("simple", av[i] + 2, 7) == 0)
+				store->selected_mode = 1;
+			else if (ft_strncmp("medium", av[i] + 2, 6) == 0)
+				store->selected_mode = 2;
+			else if (ft_strncmp("complex", av[i] + 2, 7) == 0)
+				store->selected_mode = 3;
+			else if (ft_strncmp("bench", av[i] + 2, 5) == 0)
+				store->bench_mode = 1;
+		}
+		else
+		{
+			store->arr[store->num_cnt++] = ft_atoi(av[i]);
+			if (ft_strncmp(av[i], ft_itoa(store->arr[store->num_cnt - 1]),
+					ft_strlen(av[i])))
+				return (0);
+		}
+	}
+	return (1);
 }
 
 void	init_variables(t_input *store, t_dll *stack_a, t_dll *stack_b)
@@ -35,6 +59,11 @@ void	init_variables(t_input *store, t_dll *stack_a, t_dll *stack_b)
 	stack_b->len = 0;
 	stack_b->head = NULL;
 	stack_b->tail = NULL;
+}
+
+void	run_push_swap(t_input *store, t_dll *stk_a, t_dll *stk_b)
+{
+	// To be implemented
 }
 
 int	main(int ac, char **av)
