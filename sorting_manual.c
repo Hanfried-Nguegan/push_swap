@@ -111,5 +111,5 @@ void	sorting_manual_simple_sort(t_input *store, t_dll *stk_a, t_dll *stk_b,
 		px(stk_a, stk_b);
 		rec_op(store, "pb\n", SHOW_OP);
 	}
-	manual_simple_helper_func(store, stk_a, stk_b, disp_op);
+	manual_simple_cleanup_func(store, stk_a, stk_b, disp_op);
 }

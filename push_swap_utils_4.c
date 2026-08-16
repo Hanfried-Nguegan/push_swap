@@ -58,7 +58,7 @@ void	record_rotations(t_input *store, const char *ops, int cnt)
 	}
 }
 
-void	manual_simple_helper_func(t_input *store, t_dll *stk_a, t_dll *stk_b,
+void	manual_simple_cleanup_func(t_input *store, t_dll *stk_a, t_dll *stk_b,
 		int disp_op)
 {
 	sorting_manual_sort_3(store, stk_a, stk_b, disp_op);

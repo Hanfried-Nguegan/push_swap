@@ -83,7 +83,7 @@ void				sorting_radix_sort(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
 void				ft_rev_str(char *str, int l, int r);
 void				record_rotations(t_input *store, const char *ops, int cnt);
-void				manual_simple_helper_func(t_input *store, t_dll *stk_a,
+void				manual_simple_cleanup_func(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
 void				sorting_manual_sort_3(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp);
