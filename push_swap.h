@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 01:44:51 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/08/16 13:20:20 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/08/16 14:13:34 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,28 @@ typedef struct s_dl_list
 	struct s_node	*tail;
 }					t_dll;
 
+typedef struct s_manual_arg
+{
+	int				a;
+	int				b;
+	int				c;
+	int				disp;
+}					t_marg;
+
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
+int					has_duplicates(int *arr, int cnt);
+double				compute_disorder(int *arr, int cnt);
+void				set_ranks(t_input *store);
+int					ft_putstr(const char *str);
 size_t				ft_strlen(const char *str);
 void				lst_clear(t_dll *lst);
+int					rec_op(t_input *store, const char *op, int disp);
+t_node				*create_node(int val);
+int					lst_add_front(t_dll *lst, t_node *new_node);
+t_node				*lst_pop_front(t_dll *lst);
+
 
 
 #endif

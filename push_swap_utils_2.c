@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 13:25:21 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/08/16 13:26:25 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/08/16 14:05:16 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,17 @@ int	has_duplicates(int *arr, int cnt)
 void	set_ranks(t_input *store)
 {
 	// To be implemented
+}
+
+void	perform_rotations(t_dll *stk, int cnt, int disp, const char *op)
+{
+	while (cnt--)
+	{
+		if (ft_strncmp(op, "ra", 2) == 0 || ft_strncmp(op, "rb", 2) == 0)
+			rx(stk);
+		else if (ft_strncmp(op, "rra", 3) == 0 || ft_strncmp(op, "rra", 3) == 0)
+			rrx(stk);
+		if (disp)
+			ft_putstr(op);
+	}
 }
