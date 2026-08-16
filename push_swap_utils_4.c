@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static int	find_pos(int *arr, int cnt, int tg)
+int	find_pos(int *arr, int cnt, int tg)
 {
 	int	i;
 

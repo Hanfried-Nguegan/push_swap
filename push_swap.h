@@ -79,4 +79,6 @@ void				sorting_chunk_sort(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
 void				sorting_radix_sort(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
+int					find_pos(int *arr, int cnt, int tg);
+void				sort_tab(int *arr, int cnt);
 #endif
