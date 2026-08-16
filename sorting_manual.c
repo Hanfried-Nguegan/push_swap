@@ -106,6 +106,9 @@ void	sorting_manual_simple_sort(t_input *store, t_dll *stk_a, t_dll *stk_b,
 		rec_op(store, "pb\n", SHOW_OP);
 	}
 	sorting_manual_sort_3(store, stk_a, stk_b, SHOW_OP);
-	rec_op(store, "pa\n", SHOW_OP);
-	rec_op(store, "pa\n", SHOW_OP);
+	while (stk_b->len)
+	{
+		px(stk_b, stk_a);
+		rec_op(store, "pa\n", SHOW_OP);
+	}
 }

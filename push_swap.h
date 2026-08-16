@@ -50,6 +50,8 @@ typedef struct s_manual_arg
 	int				disp;
 }					t_marg;
 
+int					find_pos(int *arr, int cnt, int tg);
+void				sort_tab(int *arr, int cnt);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
@@ -79,6 +81,5 @@ void				sorting_chunk_sort(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
 void				sorting_radix_sort(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
-int					find_pos(int *arr, int cnt, int tg);
-void				sort_tab(int *arr, int cnt);
+void				ft_rev_str(char *str, int l, int r);
 #endif
