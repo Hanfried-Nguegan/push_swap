@@ -84,7 +84,7 @@ int	find_target(t_dll *stk, int target)
 	return (-1);
 }
 
-void	sorting_manual_sort(t_input *store, t_dll *stk_a, t_dll *stk_b,
+void	sorting_manual_simple_sort(t_input *store, t_dll *stk_a, t_dll *stk_b,
 		int disp_op)
 {
 	int	mn;

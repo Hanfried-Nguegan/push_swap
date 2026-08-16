@@ -67,10 +67,8 @@ void	run_push_swap(t_input *store, t_dll *stk_a, t_dll *stk_b)
 	if (store->disorderness < 0.001)
 	{
 	}
-	else if (stk_a->len < 6)
-		sorting_manual_sort(store, stk_a, stk_b, SHOW_OP);
-	else if (store->selected_mode == 1)
-		sorting_turkish_sort(store, stk_a, stk_b, SHOW_OP);
+	else if (stk_a->len < 6 || store->selected_mode == 1)
+		sorting_manual_simple_sort(store, stk_a, stk_b, SHOW_OP);
 	else if (store->selected_mode == 2)
 		sorting_chunk_sort(store, stk_a, stk_b, SHOW_OP);
 	else if (store->selected_mode == 3)
@@ -78,7 +76,7 @@ void	run_push_swap(t_input *store, t_dll *stk_a, t_dll *stk_b)
 	else
 	{
 		if (store->disorderness < 0.2)
-			sorting_turkish_sort(store, stk_a, stk_b, SHOW_OP);
+			sorting_manual_simple_sort(store, stk_a, stk_b, SHOW_OP);
 		else if (store->disorderness < 0.5)
 			sorting_chunk_sort(store, stk_a, stk_b, SHOW_OP);
 		else

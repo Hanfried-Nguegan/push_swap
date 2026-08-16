@@ -71,7 +71,7 @@ void				perform_rotations(t_dll *stk, int cnt, int dxn,
 						const char *op);
 void				populate_stack(t_input *store, t_dll *lst);
 int					rec_op(t_input *store, const char *op, int disp);
-void				sorting_manual_sort(t_input *store, t_dll *stk_a,
+void				sorting_manual_simple_sort(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
 void				sorting_turkish_sort(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
