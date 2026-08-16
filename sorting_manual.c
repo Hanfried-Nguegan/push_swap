@@ -46,7 +46,7 @@ static void	helper(t_input *store, t_marg *args)
 	}
 }
 
-static void	sorting_manual_sort_3(t_input *store, t_dll *stk_a, t_dll *stk_b,
+void	sorting_manual_sort_3(t_input *store, t_dll *stk_a, t_dll *stk_b,
 		int disp)
 {
 	t_marg	args;
@@ -99,16 +99,17 @@ void	sorting_manual_simple_sort(t_input *store, t_dll *stk_a, t_dll *stk_b,
 	{
 		pos = find_target(stk_a, mn++);
 		if (pos < stk_a->len - pos)
+		{
 			perform_rotations(stk_a, pos, SHOW_OP, "ra\n");
+			record_rotations(store, "ra", pos);
+		}
 		else
+		{
 			perform_rotations(stk_a, stk_a->len - pos, SHOW_OP, "rra\n");
+			record_rotations(store, "rra", stk_a->len - pos);
+		}
 		px(stk_a, stk_b);
 		rec_op(store, "pb\n", SHOW_OP);
 	}
-	sorting_manual_sort_3(store, stk_a, stk_b, SHOW_OP);
-	while (stk_b->len)
-	{
-		px(stk_b, stk_a);
-		rec_op(store, "pa\n", SHOW_OP);
-	}
+	manual_simple_helper_func(store, stk_a, stk_b, disp_op);
 }

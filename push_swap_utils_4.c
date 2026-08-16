@@ -49,3 +49,22 @@ void	sort_tab(int *arr, int cnt)
 		i++;
 	}
 }
+
+void	record_rotations(t_input *store, const char *ops, int cnt)
+{
+	while (cnt--)
+	{
+		rec_op(store, ops, 0);
+	}
+}
+
+void	manual_simple_helper_func(t_input *store, t_dll *stk_a, t_dll *stk_b,
+		int disp_op)
+{
+	sorting_manual_sort_3(store, stk_a, stk_b, disp_op);
+	while (stk_b->len)
+	{
+		px(stk_b, stk_a);
+		rec_op(store, "pa\n", disp_op);
+	}
+}
