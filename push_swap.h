@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 01:44:51 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/08/16 13:02:59 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/08/16 13:20:20 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 size_t				ft_strlen(const char *str);
+void				lst_clear(t_dll *lst);
+
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 01:52:40 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/08/16 13:05:11 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/08/16 13:20:46 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,29 @@ void	init_variables(t_input *store, t_dll *stack_a, t_dll *stack_b)
 
 void	run_push_swap(t_input *store, t_dll *stk_a, t_dll *stk_b)
 {
-	// To be implemented
+	populate_stack(store, stk_a);
+	if (store->disorderness < 0.001)
+	{
+	}
+	else if (stk_a->len < 6)
+		sorting_manual_sort(store, stk_a, stk_b, SHOW_OP);
+	else if (store->selected_mode == 1)
+		sorting_turkish_sort(store, stk_a, stk_b, SHOW_OP);
+	else if (store->selected_mode == 2)
+		sorting_chunk_sort(store, stk_a, stk_b, SHOW_OP);
+	else if (store->selected_mode == 3)
+		sorting_radix_sort(store, stk_a, stk_b, SHOW_OP);
+	else
+	{
+		if (store->disorderness < 0.2)
+			sorting_turkish_sort(store, stk_a, stk_b, SHOW_OP);
+		else if (store->disorderness < 0.5)
+			sorting_chunk_sort(store, stk_a, stk_b, SHOW_OP);
+		else
+			sorting_radix_sort(store, stk_a, stk_b, SHOW_OP);
+	}
+	lst_clear(stk_a);
+	lst_clear(stk_b);
 }
 
 int	main(int ac, char **av)
