@@ -1,7 +1,8 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = 
-
+SRCS = main.c push_swap_utils_1.c push_swap_utils_2.c push_swap_utils_3.c \
+		dl_list_utils.c sorting_complex_algo.c \
+		sorting_manual.c sorting_medium_algo.c sorting_simple_algo.c
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap
 
