@@ -12,6 +12,20 @@
 
 #include "push_swap.h"
 
+static void	parse_flags(t_input *store, const char *arg)
+{
+	if (ft_strncmp("simple", arg + 2, 7) == 0)
+		store->selected_mode = 1;
+	else if (ft_strncmp("medium", arg + 2, 6) == 0)
+		store->selected_mode = 2;
+	else if (ft_strncmp("complex", arg + 2, 7) == 0)
+		store->selected_mode = 3;
+	else if (ft_strncmp("adaptive", arg + 2, 8) == 0)
+		store->selected_mode = 0;
+	else if (ft_strncmp("bench", arg + 2, 5) == 0)
+		store->bench_mode = 1;
+}
+
 int	process_user_input(t_input *store, int ac, char **av)
 {
 	int	i;
@@ -20,18 +34,7 @@ int	process_user_input(t_input *store, int ac, char **av)
 	while (++i < ac)
 	{
 		if (av[i][0] == '-' && av[i][1] == '-')
-		{
-			if (ft_strncmp("simple", av[i] + 2, 7) == 0)
-				store->selected_mode = 1;
-			else if (ft_strncmp("medium", av[i] + 2, 6) == 0)
-				store->selected_mode = 2;
-			else if (ft_strncmp("complex", av[i] + 2, 7) == 0)
-				store->selected_mode = 3;
-			else if (ft_strncmp("adaptive", av[i] + 2, 8) == 0)
-				store->selected_mode = 0;
-			else if (ft_strncmp("bench", av[i] + 2, 5) == 0)
-				store->bench_mode = 1;
-		}
+			parse_flags(store, av[i]);
 		else
 		{
 			store->arr[store->num_cnt++] = ft_atoi(av[i]);
