@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 14:34:54 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/08/16 14:36:32 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/08/17 00:12:55 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,27 +38,27 @@ static void	helper_method(t_input *store, t_dll *stk_a, t_dll *stk_b, int disp)
 
 int	rec_op(t_input *store, const char *op, int disp)
 {
-	if (ft_strncmp(op, "pa", 2) == 0)
+	if (ft_strncmp(op, "sa", 2) == 0)
 		store->ops[0]++;
-	else if (ft_strncmp(op, "pb", 2) == 0)
-		store->ops[1]++;
-	else if (ft_strncmp(op, "ra", 2) == 0)
-		store->ops[2]++;
-	else if (ft_strncmp(op, "rb", 2) == 0)
-		store->ops[3]++;
-	else if (ft_strncmp(op, "rr", 2) == 0)
-		store->ops[4]++;
-	else if (ft_strncmp(op, "rra", 3) == 0)
-		store->ops[5]++;
-	else if (ft_strncmp(op, "rrb", 3) == 0)
-		store->ops[6]++;
-	else if (ft_strncmp(op, "rrr", 3) == 0)
-		store->ops[7]++;
-	else if (ft_strncmp(op, "sa", 2) == 0)
-		store->ops[8]++;
 	else if (ft_strncmp(op, "sb", 2) == 0)
-		store->ops[9]++;
+		store->ops[1]++;
 	else if (ft_strncmp(op, "ss", 2) == 0)
+		store->ops[2]++;
+	else if (ft_strncmp(op, "pa", 2) == 0)
+		store->ops[3]++;
+	else if (ft_strncmp(op, "pb", 2) == 0)
+		store->ops[4]++;
+	else if (ft_strncmp(op, "ra", 2) == 0)
+		store->ops[5]++;
+	else if (ft_strncmp(op, "rb", 2) == 0)
+		store->ops[6]++;
+	else if (ft_strncmp(op, "rr", 2) == 0)
+		store->ops[7]++;
+	else if (ft_strncmp(op, "rra", 3) == 0)
+		store->ops[8]++;
+	else if (ft_strncmp(op, "rrb", 3) == 0)
+		store->ops[9]++;
+	else if (ft_strncmp(op, "rrr", 3) == 0)
 		store->ops[10]++;
 	if (disp)
 		ft_putstr(op);
