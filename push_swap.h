@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 01:44:51 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/08/16 14:47:15 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/08/16 20:07:35 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,8 @@ void				sorting_manual_simple_sort(t_input *store, t_dll *stk_a,
 void				sorting_turkish_sort(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
 void				sorting_chunk_sort(t_input *store, t_dll *stk_a,
+						t_dll *stk_b, int disp_op);
+void				sorting_medium_algo(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
 void				sorting_radix_sort(t_input *store, t_dll *stk_a,
 						t_dll *stk_b, int disp_op);
