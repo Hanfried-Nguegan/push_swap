@@ -130,7 +130,7 @@ This is a common strategy in algorithmic optimization: use the cheapest, simples
 
 ### AI-assisted workflow
 
-AI was used for the implementation of this README.md file
+AI was used for the creation of this README.md file
 
 ## Usage Example
 

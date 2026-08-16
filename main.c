@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 01:52:40 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/08/16 20:07:15 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/08/16 23:51:37 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	process_user_input(t_input *store, int ac, char **av)
 				store->selected_mode = 2;
 			else if (ft_strncmp("complex", av[i] + 2, 7) == 0)
 				store->selected_mode = 3;
+			else if (ft_strncmp("adaptive", av[i] + 2, 8) == 0)
+				store->selected_mode = 0;
 			else if (ft_strncmp("bench", av[i] + 2, 5) == 0)
 				store->bench_mode = 1;
 		}
@@ -82,6 +84,7 @@ void	run_push_swap(t_input *store, t_dll *stk_a, t_dll *stk_b)
 		else
 			sorting_radix_sort(store, stk_a, stk_b, SHOW_OP);
 	}
+	print_benchmark(store);
 	lst_clear(stk_a);
 	lst_clear(stk_b);
 }
