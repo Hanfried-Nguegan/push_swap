@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by fnguegan.*
+*This project has been created as part of the 42 curriculum by fnguegan and bkusi-fr.*
 
 # Push Swap
 
